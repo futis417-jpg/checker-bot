@@ -1898,3 +1898,17 @@ while True:
     except Exception as e:
         print(f"Unexpected error: {e}")
         time.sleep(5)
+from flask import Flask
+import threading
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "El bot está vivo"
+
+def run_web_server():
+    app.run(host='0.0.0.0', port=8080)
+
+# Inicia el servidor web en un hilo separado antes de tu bucle principal
+threading.Thread(target=run_web_server).start()
