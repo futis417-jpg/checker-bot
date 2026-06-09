@@ -1881,23 +1881,6 @@ def speed_down_callback(call):
     current_threads[chat_id] = new
     bot.answer_callback_query(call.id, f"🐢 تقليل السرعة: {new} خيط")
 
-load_data()
-load_sold_hashes()
-print('البوت يعمل ...')
-bot.enable_save_next_step_handlers(delay=2)
-bot.load_next_step_handlers()
-while True:
-    try:
-        bot.infinity_polling(timeout=60, long_polling_timeout=60, skip_pending=True)
-    except ApiTelegramException as e:
-        print(f"Telegram API error: {e}")
-        time.sleep(5)
-    except requests.exceptions.ConnectionError as e:
-        print(f"Connection error: {e}")
-        time.sleep(10)
-    except Exception as e:
-        print(f"Unexpected error: {e}")
-        time.sleep(5)
 from flask import Flask
 import threading
 
@@ -1910,5 +1893,26 @@ def home():
 def run_web_server():
     app.run(host='0.0.0.0', port=8080)
 
-# Inicia el servidor web en un hilo separado antes de tu bucle principal
+# Iniciamos el servidor web en segundo plano ANTES del bot para Render
 threading.Thread(target=run_web_server).start()
+
+# Carga de datos del sistema
+load_data()
+load_sold_hashes()
+print('البوت يعمل ...')
+bot.enable_save_next_step_handlers(delay=2)
+bot.load_next_step_handlers()
+
+# Bucle infinito para que el bot escuche los mensajes de Telegram
+while True:
+    try:
+        bot.infinity_polling(timeout=60, long_polling_timeout=60, skip_pending=True)
+    except ApiTelegramException as e:
+        print(f"Telegram API error: {e}")
+        time.sleep(5)
+    except requests.exceptions.ConnectionError as e:
+        print(f"Connection error: {e}")
+        time.sleep(10)
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        time.sleep(5)
