@@ -278,7 +278,7 @@ additional_services = {
 services.update(additional_services)
 
 def get_text(key, user_id):
-    lang = user_language.get(user_id, 'ar')
+    lang = user_language.get(user_id, 'en')
     texts = {
         'welcome_ar': f'''مرحباً بك في بوت صيد حسابات جميع البرامج والألعاب 🎯
 البوت مجاني ولا توجد فيه أي أخطاء
