@@ -24,7 +24,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 
 MY_SIGNATURE = "@JF_7F"
 TELEGRAM_CHANNEL = "https://t.me/cuentasgratisultra"
-FORCED_CHANNEL = "@cuentasgratisultra"
+FORCED_CHANNEL = ""
 DEVELOPER_ID = 8398522835
 
 selected_options = {}
