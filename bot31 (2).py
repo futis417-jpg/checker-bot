@@ -19,13 +19,13 @@ import pycountry
 import shutil
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-BOT_TOKEN = "8866510029:AAHFOIUAeGt5YMvoa19zILr2WaxG9Jp_tXc"
+BOT_TOKEN = "8261252522:AAGRQNvpNV8CoR4hHvQ77m9oqUXhFahSxYo"
 bot = telebot.TeleBot(BOT_TOKEN)
 
 MY_SIGNATURE = "@JF_7F"
-TELEGRAM_CHANNEL = "https://t.me/r5d5v"
-FORCED_CHANNEL = "@r5d5v"
-DEVELOPER_ID = 7502457749
+TELEGRAM_CHANNEL = "https://t.me/cuentasgratisultra"
+FORCED_CHANNEL = "@cuentasgratisultra"
+DEVELOPER_ID = 8398522835
 
 selected_options = {}
 check_results = {}
