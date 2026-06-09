@@ -19,7 +19,7 @@ import pycountry
 import shutil
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-BOT_TOKEN = "8695510257:AAHINQbRNiEg4ZhAXungEfntvd-Pq2joV-o"
+BOT_TOKEN = "8866510029:AAHFOIUAeGt5YMvoa19zILr2WaxG9Jp_tXc"
 bot = telebot.TeleBot(BOT_TOKEN)
 
 MY_SIGNATURE = "@JF_7F"
