@@ -22,9 +22,9 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 BOT_TOKEN = "8261252522:AAGRQNvpNV8CoR4hHvQ77m9oqUXhFahSxYo"
 bot = telebot.TeleBot(BOT_TOKEN)
 
-MY_SIGNATURE = "@JF_7F"
+MY_SIGNATURE = "@cuentasgratisultra"
 TELEGRAM_CHANNEL = "https://t.me/cuentasgratisultra"
-FORCED_CHANNEL = ""
+FORCED_CHANNEL = "@cuentasgratisultra"
 DEVELOPER_ID = 8398522835
 
 selected_options = {}
